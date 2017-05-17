@@ -1,0 +1,8 @@
+<div class='container'>
+    <div class='col-md-3 movie-box' *ngFor='let movie of movies'>
+      <h4>ROOM {{movie.room}}</h4>
+      <img width="80%" height="80%" src="{{movie.poster}}">
+      <p>{{movie.title}}</p>
+      <a [routerLink]="['/movie',movie.id]">View details</a>
+    </div>
+</div>

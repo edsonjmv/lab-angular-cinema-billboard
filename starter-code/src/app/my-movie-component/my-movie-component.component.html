@@ -1,0 +1,41 @@
+<div class='container movie-container'>
+  <div class='movie-title'>
+    <p>Room {{movie.room}}</p>
+    <h4>{{movie.title}}</h4>
+  </div>
+  <div class='col-md-3 movie-image'>
+    <img width="100%" height='100%' src="{{movie.poster}}">
+  </div>
+  <div class='col-md-9 movie-description'>
+    <div class='genre-list'>
+      <p class='listing left'>Genres</p>
+      <ul class='list-movie listing right' *ngFor='let item of movie?.genres'>
+        <li>{{item}}</li>
+      </ul>
+    </div>
+    <div style='height: 30px;' class='genre-list'>
+      <p class='left'>Year</p>
+      <p class='right'>{{movie.year}}</p>
+    </div>
+    <div style='height: 30px;' class='genre-list'>
+      <p class='left'>Director</p>
+      <p class='right'>{{movie.director}}</p>
+    </div>
+    <div style='font-size: 10px;' class='genre-list'>
+      <p class='listing left'>Actors</p>
+      <ul class='list-movie listing right' *ngFor='let item of movie?.actors'>
+        <li>{{item}}</li>
+      </ul>
+    </div>
+    <div  style='font-size: 10px;' class='genre-list'>
+      <p class='listing left'>Schedule</p>
+      <ul class='list-movie listing right' *ngFor='let item of movie?.hours'>
+        <li>{{item}}</li>
+      </ul>
+    </div>
+    <div style='font-size: 10px;' class='genre-list'>
+      <p class='left'>Synopsis</p>
+      <p class='right'>{{movie.synopsis}}</p>
+    </div>
+  </div>
+</div>
